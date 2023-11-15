@@ -1,17 +1,95 @@
 body {
   font-family: sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
-#webgi-canvas {
+
+.nav-bar {
+  position: absolute;
+  display: flex;
+  background-color: beige;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.button-navbar {
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  border-radius: 15px;
+  color: white;
+}
+
+.button-navbar:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
 }
-#webgi-canvas-container{
-  width: 80vw;
-  height: 80vh;
-  margin: 10vh 10vw;
-  border-radius: 0.5rem;
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+.section-one {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+  padding-left: 10%;
+}
+
+.section-two {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+  flex-direction: row-reverse;
+}
+
+.section-three {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+  flex-direction: row;
+  padding-left: 10%;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 10%;
+  z-index: 1;
+}
+
+.desc {
+  max-width: 400px;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+#webgi-canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+#webgi-canvas-container {
+  top: 0px;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
